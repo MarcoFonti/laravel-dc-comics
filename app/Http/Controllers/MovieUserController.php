@@ -12,7 +12,13 @@ class MovieUserController extends Controller
      */
     public function index()
     {
-        //
+        /* RECUPERO VALORI DEL FILE COMICS */
+        $movies = Movie::all();
+
+        /* RECUPERO VALORI DEL FILE MAIN_MENU */
+        $main_menu = config('main_menu');
+
+        return view('movies.index', compact('movies', 'main_menu'));
     }
 
     /**
@@ -36,7 +42,10 @@ class MovieUserController extends Controller
      */
     public function show(Movie $movie)
     {
-        //
+        /* RECUPERO VALORI DEL FILE MAIN_MENU */
+        $main_menu = config('main_menu');
+
+        return view('movies.show', compact('movie', 'main_menu'));
     }
 
     /**
