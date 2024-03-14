@@ -1,1 +1,25 @@
-@import '~bootstrap/scss/bootstrap';
+// @import '~bootstrap/scss/bootstrap';
+
+/* GENERICO */
+@use "generics";
+
+/* HEADER */
+@use "header";
+
+/* JUMBOTROM */
+@use "jumbotrom";
+
+/* MOVIES */
+@use "movies";
+
+/* LISTA FILM */
+@use "films";
+
+/* MAIN MENU */
+@use "menu";
+
+/* FOOTERTOP */
+@use "footerTop";
+
+/* FOOTERBOTTOM */
+@use "footerBottom";

@@ -1,0 +1,166 @@
+/* RECIPIENTE JUMBOTROM */
+#recipe-jumbotro {
+    position: relative;
+    background-image: url(../img/jumbotron.jpg);
+    min-height: 350px;
+    background-size: cover;
+}
+
+/* RECIPENTE CURRENT SERIES */
+.recipe-movies {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #0282f9;
+    width: 100%;
+    height: 50px;
+}
+
+/* IMMAGINE MOVIES */
+.image-movies {
+    position: absolute;
+    bottom: 10px;
+    left: 15%;
+    width: 150px;
+    border: 2px solid #b8b0b0;
+}
+
+/* RECIPENTE MOVIES */
+#recipe-content-movies {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    min-height: 400px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+/* TITOLO MOVIES */
+.title-movies {
+    font-size: 45px;
+    color: #003f61;
+}
+
+/* INFO MOVIES */
+.movies-info {
+    display: flex;
+    justify-content: space-between;
+    background-color: #55ba59;
+    align-items: center;
+    padding: 0px 20px;
+    border: 1px solid #3d8841;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* RECIPIENTE PREZZO MOVIES */
+.movies-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+    border-right: 1px solid #3d8841;
+    padding: 10px;
+}
+
+/* TESTO MOVIES */
+.text-movies {
+    text-align: end;
+}
+
+/* IMMAGINE MOVIES */
+.path-movies {
+    width: 300px;
+    height: 300px;
+}
+
+/* RECIPIENTE INFO MOVIES */
+#recipe-info-movies {
+    background-color: #f6f6f6;
+    display: flex;
+    min-height: 400px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTENITORE MOVIES */
+.container-movies {
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+/* TITOLO INFORMAZIONI */
+.title-info {
+    font-size: 25px;
+    color: #003f61;
+    margin-bottom: 20px;
+    padding: 10px 0px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+/* TITOLO ATTORI */
+.title-action {
+    font-size: 16px;
+    color: #003f61;
+}
+
+/* TESTO SINGOLA INFORMAZIONE */
+.title-margin {
+    width: 60%;
+}
+
+/* RECIPIENTE D-FLEX */
+.d-flex-movies {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+/* RECIPIENTE TALENT */
+.recipe-talent {
+    width: 50%;
+}
+
+/* SINGOLO ATTORE */
+.actors-movies {
+    width: 70%;
+}
+
+/* RECIPIENTE SPECS */
+.recipe-specs {
+    width: 50%;
+}
+
+/* TESTO BLUE */
+.text-blue {
+    color: #4fbade;
+}
+
+/* SEZIONE CONTENUTO COMICS */
+#recipe-content-link-movies {
+    background-color: #d8d8d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    text-transform: uppercase;
+    padding: 30px 0px;
+}
+
+/* RECIPIENTE COMICS */
+.recipe-comics {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* IMMAGINI */
+.recipe-comics {
+    .image-link-movies {
+        width: 40px;
+    }
+}

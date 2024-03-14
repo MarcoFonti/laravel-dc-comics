@@ -1,0 +1,45 @@
+/* RECIPE FOOTER */
+#recipe-footer-top {
+    background-image: url(../img/footer-bg.jpg);
+    padding: 30px 0px;
+    display: flex;
+    position: relative;
+}
+
+/* IMMAGINE DC */
+#recipe-footer-top img {
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* RECIPE NAV FOOTER */
+.footer-row {
+    display: flex;
+    width: 1100px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+/* TITOLO LINK */
+.title-footer-top {
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+/* LISTE */
+.list-footer-top {
+    list-style: none;
+    padding: 0px;
+}
+
+/* LINK */
+.link-footer-top {
+    a {
+        text-decoration: none;
+        color: #797979;
+    }
+}
