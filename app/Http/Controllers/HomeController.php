@@ -10,12 +10,10 @@ class HomeController extends Controller
 {
     public function __invoke()
     {
-        /* RECUPERO VALORI DEL FILE COMICS */
-        $movies = Movie::all();
 
         /* RECUPERO VALORI DEL FILE MAIN_MENU */
         $main_menu = config('main_menu');
 
-        return view('home', compact('movies', 'main_menu'));
+        return view('home', compact('main_menu'));
     }
 }

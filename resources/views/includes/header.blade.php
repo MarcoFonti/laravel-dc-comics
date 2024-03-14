@@ -2,7 +2,9 @@
 <header>
     <!-- RECIPENTE LOGO -->
     <figcaption class="recipe-image">
-        <img src="{{ asset('images/dc-logo.png') }}" alt="">
+        <a href="{{ route('home') }}">
+            <img src="{{ asset('images/dc-logo.png') }}" alt="Logo Dc">
+        </a>
     </figcaption>
     <!-- RECIPENTE LISTA LINK -->
     <nav class="recipe-nav">

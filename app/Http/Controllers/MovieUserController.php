@@ -18,7 +18,7 @@ class MovieUserController extends Controller
         /* RECUPERO VALORI DEL FILE MAIN_MENU */
         $main_menu = config('main_menu');
 
-        return view('movies.index', compact('movies', 'main_menu'));
+        return view('movies_user.index', compact('movies', 'main_menu'));
     }
 
     /**
@@ -45,7 +45,7 @@ class MovieUserController extends Controller
         /* RECUPERO VALORI DEL FILE MAIN_MENU */
         $main_menu = config('main_menu');
 
-        return view('movies.show', compact('movie', 'main_menu'));
+        return view('movies_user.show', compact('movie', 'main_menu'));
     }
 
     /**
