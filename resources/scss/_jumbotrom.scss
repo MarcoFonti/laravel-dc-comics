@@ -1,0 +1,28 @@
+/* IMMAGINE JUMBOTROM */
+#recipe-jumbotrom {
+    img {
+        width: 100%;
+        height: 350px;
+    }
+}
+
+/* RECIPIENTE JUMBOTROM */
+#recipe-jumbotrom {
+    position: relative;
+    background-image: url(../img/jumbotron.jpg);
+    min-height: 350px;
+    background-size: cover;
+}
+
+/* RECIPENTE CURRENT SERIES */
+.reicpe-series {
+    position: absolute;
+    bottom: -5%;
+    left: 20%;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #0282f9;
+    padding: 10px 20px;
+    border: 2px solid #000000;
+}
