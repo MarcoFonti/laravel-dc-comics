@@ -14,5 +14,5 @@ return [
     ['text' => 'fans', 'route' => 'fans'],
     ['text' => 'news', 'route' => 'news'],
     ['text' => 'shop', 'route' => 'shop'],
-    ['text' => 'movies administrator', 'route' => 'movies.index'],
+    ['text' => 'movies administrator', 'route' => 'movies.index'], 
 ];

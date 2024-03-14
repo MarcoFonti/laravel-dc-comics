@@ -36,16 +36,16 @@ Route::get('/comics', function () {
 
 
 /* MOVIES AMMINISTRATORE */
-Route::get('/movies', [MovieController::class, 'index'])->name('movies.index');
+Route::get('/movies', [MovieController::class, 'index'])->name('movies.index'); 
 
 /* SINGOLO MOVIE AMMINISTRATORE */
 Route::get('/movies{movie}', [MovieController::class, 'show'])->name('movies.show');
 
 /* MOVIES */
-Route::get('/movies', [MovieUserController::class, 'index'])->name('movies_user.index');
+Route::get('/movies/user', [MovieUserController::class, 'index'])->name('movies_user.index');
 
 /* SINGOLO MOVIE */
-Route::get('/movies{movie}', [MovieUserController::class, 'show'])->name('movies_user.show');
+Route::get('/movies/user{movie}', [MovieUserController::class, 'show'])->name('movies_user.show');
 
 
 /* TV */
