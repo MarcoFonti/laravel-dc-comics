@@ -61,9 +61,14 @@
                     <textarea class="form-control" name="description" id="description" rows="3"></textarea>
                 </div>
             </div>
-            <div class="col-12">
+            <div class="col-6">
+                <div class="d-flex justify-content-start align-items-center">
+                    <a class="btn btn-info" href="{{ route('movies_user.index') }}">Torna Indietro</a>
+                </div>
+            </div>
+            <div class="col-6">
                 <div class="d-flex justify-content-end align-items-center">
-                    <button type="submit" class="btn btn-info">Salva Film</button>
+                    <button type="submit" class="btn btn-success">Salva Film</button>
                 </div>
             </div>
         </div>

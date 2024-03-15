@@ -26,7 +26,7 @@ class MovieUserController extends Controller
      */
     public function create()
     {
-        return view('movies_user.create');
+        return view('movies_user.create' );
     }
 
     /**
