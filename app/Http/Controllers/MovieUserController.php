@@ -26,7 +26,7 @@ class MovieUserController extends Controller
      */
     public function create()
     {
-        return view('movies_user.create' );
+        return view('movies_user.create');
     }
 
     /**
@@ -34,6 +34,19 @@ class MovieUserController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->validate([
+            'title' => 'required|string|unique:movies',
+            'description' => 'nullable',
+            'thumb' => 'nullable|url:http,https',
+            'price' => 'required|string',
+            'series' => 'string',
+            'sale_date' => 'nullable|date',
+            'type' => 'string',
+            'artists' => 'string',
+            'writers' => 'string',
+        ]);
+
         $data = $request->all();
 
         $movie = new Movie();
@@ -43,7 +56,6 @@ class MovieUserController extends Controller
         $movie->save();
 
         return redirect()->route('movies_user.show', $movie->id);
-        
     }
 
     /**
