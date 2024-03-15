@@ -18,14 +18,14 @@
         <div class="container-films">
             @foreach ($movies as $movie)
                 <div class="recipe-films">
-                    <a href="{{ route('movies.show', $movie->id) }}">
+                    <a href="{{ route('movies_user.show', $movie->id) }}">
                         <img src="{{ $movie->thumb }}" alt="">
                         <div class="text-films"></div>
                     </a>
                 </div>
             @endforeach
         </div>
-        <a class="button-films" href="{{ route('movies_user.create') }}">Aggiungi film</a>
+        <a class="button-films text-decoration-none" href="{{ route('movies_user.create') }}">Aggiungi film</a>
     </section>
     <!-- SEZIONE CONTENUTO MENU -->
     <section id="recipe-content-comics">

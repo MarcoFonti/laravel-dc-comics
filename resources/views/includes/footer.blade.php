@@ -48,9 +48,9 @@
 <!-- FOOTER BOTTOM -->
 <footer id="recipe-footer-bottom">
     <div class="container-follow">
-        <a class="sing-up" href="#">sing-up now!</a>
+        <a class="sing-up text-decoration-none" href="#">sing-up now!</a>
         <nav class="recipe-icon">
-            <a class="follow" href="#">follow us</a>
+            <a class="follow text-decoration-none" href="#">follow us</a>
             <!-- ICONE -->
             <ul class="link-icon">
                 @foreach (config('footer_icon') as $icon)
