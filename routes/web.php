@@ -36,28 +36,36 @@ Route::get('/comics', function () {
 
 
 /* MOVIES AMMINISTRATORE */
-Route::get('/movies', [MovieController::class, 'index'])->name('movies.index'); 
+Route::get('admi/movies', [MovieController::class, 'index'])->name('movies.index'); 
 
 /* CREAZIONE MOVIES AMMINISTRATORE */
-Route::get('/movies/create', [MovieController::class, 'create'])->name('movies.create'); 
+Route::get('admi/movies/create', [MovieController::class, 'create'])->name('movies.create'); 
 
 /* SINGOLO MOVIE AMMINISTRATORE */
-Route::get('/movies{movie}', [MovieController::class, 'show'])->name('movies.show');
+Route::get('admi/movies{movie}', [MovieController::class, 'show'])->name('movies.show');
+
+/* MODIFICA FORM AMMINISTRATORE  */
+Route::get('admi/movies/{movie}/edit', [MovieController::class, 'edit'])->name('movies.edit');
 
 /* SALVO IL FORM AMMINISTRATORE  */
-Route::post('/movies', [MovieController::class, 'store'])->name('movies.store');
+Route::post('admi/movies', [MovieController::class, 'store'])->name('movies.store');
+
+/* SALVO IL FORM DI MODIFICA DELL'MMINISTRATORE  */
+Route::put('admi/movies{movie}', [MovieController::class, 'update'])->name('movies.update');
+
+
 
 /* MOVIES */
-Route::get('/movies/user', [MovieUserController::class, 'index'])->name('movies_user.index');
+Route::get('/movies', [MovieUserController::class, 'index'])->name('movies_user.index');
 
 /* CREAZIONE MOVIES */
-Route::get('/movies/user/create', [MovieUserController::class, 'create'])->name('movies_user.create');
+Route::get('/movies/create', [MovieUserController::class, 'create'])->name('movies_user.create');
 
 /* SINGOLO MOVIE */
-Route::get('/movies/user{movie}', [MovieUserController::class, 'show'])->name('movies_user.show');
+Route::get('/movies{movie}', [MovieUserController::class, 'show'])->name('movies_user.show');
 
 /* SALVO IL FORM  */
-Route::post('/movies/user', [MovieUserController::class, 'store'])->name('movies_user.store');
+Route::post('/movies', [MovieUserController::class, 'store'])->name('movies_user.store');
 
 /* TV */
 Route::get('/tv', function () {

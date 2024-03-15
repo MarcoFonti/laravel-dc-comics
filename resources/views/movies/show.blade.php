@@ -66,6 +66,11 @@
             </div>
         </div>
     </section>
+    <div class="recipe-films btn btn-warning d-flex justify-content-center align-items-center my-5">
+        <a class="text-white text-decoration-none" href="{{ route('movies.edit', $movie->id) }}">
+            Modifica 
+        </a>
+    </div>
     <!-- SEZIONE CONTENUTO MENU -->
     <section id="recipe-content-link-movies">
         @foreach ($main_menu as $menu)

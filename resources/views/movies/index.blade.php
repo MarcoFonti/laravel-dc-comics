@@ -25,7 +25,7 @@
                 </div>
             @endforeach
         </div>
-        <a class="button-films" href="{{ route('movies.create') }}">Aggiungi film</a>
+        <a class="button-films text-decoration-none" href="{{ route('movies.create') }}">Aggiungi film</a>
     </section>
     <!-- SEZIONE CONTENUTO MENU -->
     <section id="recipe-content-comics">
