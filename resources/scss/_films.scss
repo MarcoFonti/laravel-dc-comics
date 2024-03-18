@@ -40,10 +40,11 @@
 
 /* BOTTONE */
 .button-films {
-    background-color: #0282f9;
-    border: 1px solid #1c1c1c;
+    display: flex;
+    gap: 10px;
+    border: 1px solid white;
     color: #ffffff;
-    padding: 10px 40px;
+    padding: 10px 20px;
     text-transform: uppercase;
     margin-top: 60px;
 }

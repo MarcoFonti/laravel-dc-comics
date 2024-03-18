@@ -34,41 +34,55 @@ Route::get('/comics', function () {
     return view('link_header.comics');
 })->name('comics');
 
+/* ------------------------------------ AMMINISTRATORE------------------------------------------------ */
 
-/* MOVIES AMMINISTRATORE */
-Route::get('admi/movies', [MovieController::class, 'index'])->name('movies.index'); 
+/* CESTINO ELEMENTO */
+Route::get('admi/movies/trash', [MovieController::class, 'trash'])->name('movies.trash');
 
-/* CREAZIONE MOVIES AMMINISTRATORE */
-Route::get('admi/movies/create', [MovieController::class, 'create'])->name('movies.create'); 
+/* RIPRISTINI ELEMENTO */
+Route::patch('admi/movies/{movie}/restore', [MovieController::class, 'restore'])->name('movies.restore');
 
-/* SINGOLO MOVIE AMMINISTRATORE */
-Route::get('admi/movies{movie}', [MovieController::class, 'show'])->name('movies.show');
+/* ELIMINI DEFINITIVAMENTE L'ELEMENTO */
+Route::delete('admi/movies/{movie}/drop', [MovieController::class, 'drop'])->name('movies.drop');
 
-/* MODIFICA FORM AMMINISTRATORE  */
-Route::get('admi/movies/{movie}/edit', [MovieController::class, 'edit'])->name('movies.edit');
 
-/* SALVO IL FORM AMMINISTRATORE  */
+/* MOVIES */
+Route::get('admi/movies', [MovieController::class, 'index'])->name('movies.index');
+
+/* CREAZIONE MOVIES */
+Route::get('admi/movies/create', [MovieController::class, 'create'])->name('movies.create');
+
+/* SINGOLO MOVIE */
+Route::get('admi/movies{movie}', [MovieController::class, 'show'])->name('movies.show')->withTrashed();
+
+/* MODIFICA FORM */
+Route::get('admi/movies/{movie}/edit', [MovieController::class, 'edit'])->name('movies.edit')->withTrashed();
+
+/* SALVO IL FORM */
 Route::post('admi/movies', [MovieController::class, 'store'])->name('movies.store');
 
-/* SALVO IL FORM DI MODIFICA DELL'AMMINISTRATORE  */
-Route::put('admi/movies{movie}', [MovieController::class, 'update'])->name('movies.update');
+/* SALVO IL FORM DI MODIFICA  */
+Route::put('admi/movies{movie}', [MovieController::class, 'update'])->name('movies.update')->withTrashed();
 
-/* CESTINO DELL'AMMINISTRATORE  */
+/* METTI NEL CESTINO ELEMENTO */
 Route::delete('admi/movies{movie}', [MovieController::class, 'destroy'])->name('movies.destroy');
+
 
 /* ------------------------------------------------------------------------------------------------------------------------ */
 
-/* MOVIES */
+/* MOVIES USER */
 Route::get('/movies', [MovieUserController::class, 'index'])->name('movies_user.index');
 
-/* CREAZIONE MOVIES */
+/* CREAZIONE MOVIES USER */
 Route::get('/movies/create', [MovieUserController::class, 'create'])->name('movies_user.create');
 
-/* SINGOLO MOVIE */
+/* SINGOLO MOVIE USER */
 Route::get('/movies{movie}', [MovieUserController::class, 'show'])->name('movies_user.show');
 
-/* SALVO IL FORM  */
+/* SALVO IL FORM USER  */
 Route::post('/movies', [MovieUserController::class, 'store'])->name('movies_user.store');
+
+/* -------------------------------------------------------------------------------------------------------------------------- */
 
 /* TV */
 Route::get('/tv', function () {

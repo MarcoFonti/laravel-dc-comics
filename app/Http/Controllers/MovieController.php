@@ -94,4 +94,34 @@ class MovieController extends Controller
 
         return redirect()->route('movies.index')->with('type', 'secondary')->with('message', "Elemento ( $movie->title ) messo nel cestino");
     }
+
+    /* SOFT DELETE */
+
+    public function trash()
+    {
+
+        $movies = Movie::onlyTrashed()->get();
+        
+        return view('movies.trash', compact('movies'));
+    }
+    
+    public function restore(string $id)
+    {
+
+        $movie = Movie::onlyTrashed()->findOrFail($id);
+
+        $movie->restore();
+
+        return redirect()->route('movies.index')->with('type', 'success')->with('message', "Elemento ( $movie->title ) ripreso dal cestino");
+    }
+
+    public function drop(string $id)
+    {
+
+        $movie = Movie::onlyTrashed()->findOrFail($id);
+
+        $movie->forceDelete();
+        
+        return redirect()->route('movies.index')->with('type', 'danger')->with('message', "Elemento ( $movie->title ) eliminato");
+    }
 }
