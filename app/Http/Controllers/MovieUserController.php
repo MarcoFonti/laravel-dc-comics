@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreMovieRequest;
 use App\Models\Movie;
 use Illuminate\Http\Request;
 
@@ -32,22 +33,10 @@ class MovieUserController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreMovieRequest $request)
     {
 
-        $request->validate([
-            'title' => 'required|string|unique:movies',
-            'description' => 'nullable',
-            'thumb' => 'nullable|url:http,https',
-            'price' => 'required|string',
-            'series' => 'string',
-            'sale_date' => 'nullable|date',
-            'type' => 'string',
-            'artists' => 'string',
-            'writers' => 'string',
-        ]);
-
-        $data = $request->all();
+        $data = $request->validated();
 
         $movie = new Movie();
 

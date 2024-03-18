@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreMovieRequest;
+use App\Http\Requests\UpdateMovieRequest;
 use App\Models\Movie;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -34,22 +36,10 @@ class MovieController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreMovieRequest $request)
     {
-
-        $data = $request->validate([
-            'title' => 'required|string|unique:movies',
-            'description' => 'nullable',
-            'thumb' => 'nullable|url:http,https',
-            'price' => 'required|string',
-            'series' => 'string',
-            'sale_date' => 'nullable|date',
-            'type' => 'string',
-            'artists' => 'string',
-            'writers' => 'string',
-        ]);
         
-        $data = $request->all();
+        $data = $request->validated();
 
         $movie = new Movie();
 
@@ -82,23 +72,10 @@ class MovieController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Movie $movie)
+    public function update(UpdateMovieRequest $request, Movie $movie)
     {
-
         
-        $request->validate([
-            'title' =>['required', 'string', Rule::unique('movies')->ignore($movie->id)],
-            'description'=>'nullable',
-            'thumb'=>'nullable|url:http,https',
-            'price' =>'required|string',
-            'series'=>'string',
-            'sale_date'=>'nullable|date',
-            'type'=>'string',
-            'artists'=>'string',
-            'writers'=>'string',
-        ]);
-        
-        $data = $request->all();
+        $data = $request->validated();
 
         $movie->fill($data);
 
