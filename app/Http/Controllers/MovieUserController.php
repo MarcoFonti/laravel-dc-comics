@@ -44,7 +44,7 @@ class MovieUserController extends Controller
 
         $movie->save();
 
-        return redirect()->route('movies_user.show', $movie->id);
+        return redirect()->route('movies_user.show', $movie->id)->with('type', 'success')->with('message', "Elemento ( $movie->title ) salvato");
     }
 
     /**

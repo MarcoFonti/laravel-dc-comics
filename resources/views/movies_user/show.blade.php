@@ -11,6 +11,8 @@
         <div class="recipe-movies"></div>
         <img class="image-movies" src="{{ $movie->thumb }}" alt="">
     </section>
+    {{-- ALERT --}}
+    @include('includes.alert')
     <!-- SEZIONE CONTENUTO MENU -->
     <section id="recipe-content-movies">
         <article class="article-movies">
