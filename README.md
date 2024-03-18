@@ -31,6 +31,22 @@ BONUS:
 - provare a implementare una minima validazione come visto stamattina!
 
 ---
+
+Ciao ragazzi,
+
+esercizio di oggi: Laravel CRUD Edit & Update
+- nome repo: laravel-dc-comics  (stessa di ieri)
+- Proseguiamo con l'esercizio Comics e aggiungiamo la possibilità di modificare un fumetto!
+- Ci servirà una rotta per il form e un'altra per l'effettiva modifica del film nel database!
+- Aiutatevi con slide e documentazione!
+
+BONUS
+- provare a implementare la validazione come visto stamattina!
+- provare a unire i form di edit e create
+
+---
+
+
 Ciao ragazzi,
 
 esercizio di oggi: Laravel CRUD Destroy & Validation
