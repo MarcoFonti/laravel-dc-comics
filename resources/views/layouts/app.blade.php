@@ -23,6 +23,9 @@
 
     <!-- FOOTER -->
     @include('includes.footer')
+
+    <!-- JS -->
+    @yield('js')
 </body>
 
 </html>
