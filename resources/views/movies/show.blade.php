@@ -75,7 +75,7 @@
         <form action="{{ route('movies.destroy', $movie->id) }}" method="POST" id="delete-form">
             @csrf
             @method('DELETE')
-            <button type="submit" class="text-white btn btn-secondary text-uppercase">Cestino</button>
+            <button type="submit" class="text-white btn btn-secondary text-uppercase">Cestina</button>
         </form>
     </div>
     <!-- SEZIONE CONTENUTO MENU -->
