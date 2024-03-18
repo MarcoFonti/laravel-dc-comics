@@ -14,6 +14,8 @@
     </section>
     <!-- SEZIONE CONTENUTO  -->
     <section id="recipe-content">
+        {{-- ALERT --}}
+        @include('includes.alert')
         <!-- CONTENITORE FILM -->
         <div class="container-films">
             @foreach ($movies as $movie)

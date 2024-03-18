@@ -47,7 +47,7 @@ class MovieController extends Controller
 
         $movie->save();
 
-        return redirect()->route('movies.show', $movie->id);
+        return redirect()->route('movies.show', $movie->id)->with('type', 'success')->with('message', "Elemento ( $movie->title ) salvato");
     }
 
     /**
@@ -81,7 +81,7 @@ class MovieController extends Controller
 
         $movie->save();
 
-        return redirect()->route('movies.show', $movie->id);
+        return redirect()->route('movies.show', $movie->id)->with('type', 'info')->with('message', "Elemento ( $movie->title ) aggiornato");;
         
     }
 
@@ -92,6 +92,6 @@ class MovieController extends Controller
     {
         $movie->delete();
 
-        return redirect()->route('movies.index');
+        return redirect()->route('movies.index')->with('type', 'secondary')->with('message', "Elemento ( $movie->title ) messo nel cestino");
     }
 }
