@@ -4,7 +4,7 @@
 
 @section('main-content')
 <div class="card m-5">
-    <h3 class="text-center m-3">AMMINISTRATORE</h3>
+    <h1 class="text-center mt-3 text-uppercase">Amministratore</h1>
     <form action="{{ route('movies.store') }}" method="POST">
         @include('includes.movies.form')
             <div class="col-6">

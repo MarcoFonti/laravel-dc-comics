@@ -4,8 +4,8 @@
 
 @section('main-content')
     <div class="card m-3">
-        <div class="card-title text-center">
-            <h1>Cestino</h1>
+        <div class="card-title text-center text-danger mt-3">
+            <h1 class="text-uppercase">Cestino</h1>
         </div>
         <div class="card-body">
             <table class="table">
