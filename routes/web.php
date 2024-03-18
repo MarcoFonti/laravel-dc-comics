@@ -50,10 +50,13 @@ Route::get('admi/movies/{movie}/edit', [MovieController::class, 'edit'])->name('
 /* SALVO IL FORM AMMINISTRATORE  */
 Route::post('admi/movies', [MovieController::class, 'store'])->name('movies.store');
 
-/* SALVO IL FORM DI MODIFICA DELL'MMINISTRATORE  */
+/* SALVO IL FORM DI MODIFICA DELL'AMMINISTRATORE  */
 Route::put('admi/movies{movie}', [MovieController::class, 'update'])->name('movies.update');
 
+/* CESTINO DELL'AMMINISTRATORE  */
+Route::delete('admi/movies{movie}', [MovieController::class, 'destroy'])->name('movies.destroy');
 
+/* ------------------------------------------------------------------------------------------------------------------------ */
 
 /* MOVIES */
 Route::get('/movies', [MovieUserController::class, 'index'])->name('movies_user.index');

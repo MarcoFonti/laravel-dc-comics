@@ -66,10 +66,15 @@
             </div>
         </div>
     </section>
-    <div class="recipe-films btn btn-warning d-flex justify-content-center align-items-center my-5">
-        <a class="text-white text-decoration-none" href="{{ route('movies.edit', $movie->id) }}">
+    <div class="recipe-films d-flex justify-content-center align-items-center my-5 gap-3">
+        <a class="text-white btn btn-warning text-decoration-none" href="{{ route('movies.edit', $movie->id) }}">
             Modifica 
         </a>
+        <form action="{{ route('movies.destroy', $movie->id) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="text-white btn btn-secondary text-uppercase">Cestino</button>
+        </form>
     </div>
     <!-- SEZIONE CONTENUTO MENU -->
     <section id="recipe-content-link-movies">
