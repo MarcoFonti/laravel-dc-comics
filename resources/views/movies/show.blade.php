@@ -70,9 +70,9 @@
     </section>
     <div class="recipe-films d-flex justify-content-center align-items-center my-5 gap-3">
         <a class="text-white btn btn-warning text-decoration-none" href="{{ route('movies.edit', $movie->id) }}">
-            Modifica 
+            Modifica
         </a>
-        <form action="{{ route('movies.destroy', $movie->id) }}" method="POST">
+        <form action="{{ route('movies.destroy', $movie->id) }}" method="POST" id="delete-form">
             @csrf
             @method('DELETE')
             <button type="submit" class="text-white btn btn-secondary text-uppercase">Cestino</button>
@@ -87,4 +87,19 @@
             </div>
         @endforeach
     </section>
+@endsection
+
+@section('js')
+    <script>
+        const deleteForm = document.getElementById('delete-form')
+
+        deleteForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const confirmDeletion = confirm('Sei sicuro di voler mettere {{ $movie->title }} nel cestino')
+
+            if (confirmDeletion) {
+                deleteForm.submit();
+            }
+        })
+    </script>
 @endsection
