@@ -29,3 +29,37 @@ esercizio di oggi: Laravel CRUD Create & Store
 
 BONUS:
 - provare a implementare una minima validazione come visto stamattina!
+
+---
+
+Ciao ragazzi,
+
+esercizio di oggi: Laravel CRUD Edit & Update
+- nome repo: laravel-dc-comics  (stessa di ieri)
+- Proseguiamo con l'esercizio Comics e aggiungiamo la possibilità di modificare un fumetto!
+- Ci servirà una rotta per il form e un'altra per l'effettiva modifica del film nel database!
+- Aiutatevi con slide e documentazione!
+
+BONUS
+- provare a implementare la validazione come visto stamattina!
+- provare a unire i form di edit e create
+
+---
+
+
+Ciao ragazzi,
+
+esercizio di oggi: Laravel CRUD Destroy & Validation
+- nome repo: laravel-dc-comics  (stessa di venerdì)
+- Proseguiamo con l'esercizio Comics e aggiungiamo la possibilità di eliminare un fumetto!
+- Ci servirà una rotta per l'effettiva eliminazione del fumetto nel database e un bottone per richiamarla!
+- Aggiungiamo poi una validazione alla creazione e alla modifica se non lo avete già fatto.
+- Aiutatevi con slide e documentazione!
+
+BONUS
+- chiedere conferma all'utente quando prova ad eliminare un fumetto
+- provare ad effettuare la validazione con le FormRequest
+- provare ad implementare le soft deletes
+
+SUPER BONUS
+- provare a usare la modale di Bootstrap per chiedere conferma della cancellazione
