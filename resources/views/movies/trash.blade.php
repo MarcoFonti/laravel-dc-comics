@@ -60,7 +60,7 @@
 
         dropForm.addEventListener('submit', (event) => {
             event.preventDefault();
-            const confirmDrop = confirm('Sei sicuro di volor eliminare definitivamente {{ $movie->title }}')
+            const confirmDrop = confirm('Sei sicuro di volor eliminare definitivamente questo elemento ? ')
 
             if (confirmDrop) {
                 dropForm.submit();
